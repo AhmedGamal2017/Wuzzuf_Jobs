@@ -8,12 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class Router {
 
 	@RequestMapping("/gamal")
-	public String gamal(/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) {return "Gamal Page";}
+	public String gamal(
+			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
+	{return "Gamal Page";}
 	
 	@RequestMapping("/mady")
-	public String mady(/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) {return "Mady Page";}
+	public String mady(
+			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
+	{return "Mady Page";}
 	
 	@RequestMapping("/atef")
-	public String atef(/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) {return "Atef Page";}
+	public String atef(
+			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
+	{return "Atef Page";}
 	
 }
