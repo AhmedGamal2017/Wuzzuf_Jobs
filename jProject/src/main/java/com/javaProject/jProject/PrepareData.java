@@ -5,27 +5,30 @@ import tech.tablesaw.api.Table;
 public class PrepareData implements IPrepareData {
 
 	@Override
-	public String structureOfData(Table data) {
-		// TODO  
-		return null;
+	public Table structureOfData(Table data) {
+		  
+		return data.structure();
 	}
 
 	@Override
-	public String summaryOfData(Table data) {
-		// TODO  
-		return null;
+	public String viewData(Table data) {
+		
+		return data.print();		
+		
+	}
+	
+	@Override
+	public Table summaryOfData(Table data) {
+		
+		return data.summary();		
+		
 	}
 
 	@Override
-	public Table cleanTableFromNull(Table data) {
-		// TODO  
-		return null;
+	public Table cleanData(Table data) {
+		 
+		return data.dropRowsWithMissingValues().dropDuplicateRows();
 	}
 
-	@Override
-	public Table cleanTableFromDublication(Table data) {
-		// TODO  
-		return null;
-	}
 
 }
