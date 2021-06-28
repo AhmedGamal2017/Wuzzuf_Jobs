@@ -29,6 +29,7 @@ public class DEMO {
 //		d3.displayBarChart(df2, "Title");
 //		d3.displayBarChart(df2, "Location");
 //		d3.displayPieChart(df2);
+//		System.out.println(d3.displayTable(df2));
 
 	}
 
