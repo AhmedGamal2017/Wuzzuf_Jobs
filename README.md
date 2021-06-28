@@ -1,8 +1,3 @@
-### ma7desh hayekteb 7aga hena
+# Wuzzuf Jobs - GUI
 
-# thanks
-
-- one
-- two
-- seven
-- eleven
+this is the graphic user interface branch of the project wuzzuf job
