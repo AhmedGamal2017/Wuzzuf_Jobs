@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Router {
 	
-	@Value("${welcome.message:message}")
+//	@Value("${welcome.message:message}")
 	private String message = "Hello World";
 	
+//	@Value("${welcome.jobs:jobs}")
 	private List<WuzzufJob> jobs = new ArrayList<WuzzufJob>();
-
+	
+	
 //	@RequestMapping("/gamal")
 //	public String gamal(
 //			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
@@ -33,7 +35,16 @@ public class Router {
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
+		WuzzufJob wj = new WuzzufJob("1","2","3","4","5","6","7","12,2,2");
+		jobs.add(wj);
+		jobs.add(wj);
+		jobs.add(wj);
+		jobs.add(wj);
+		jobs.add(wj);
+		jobs.add(wj);
+		jobs.add(wj);
 		model.put("message", this.message);
+		model.put("jobs", jobs);
 		return "welcome";
 	}
 

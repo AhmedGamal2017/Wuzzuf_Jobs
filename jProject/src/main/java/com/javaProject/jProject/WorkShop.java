@@ -47,7 +47,7 @@ public class WorkShop {
 public static void main(String[] args) throws IOException, Exception {
 		
 
-		Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
+	Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
 
 	System.out.println(df.summary().print());
 	

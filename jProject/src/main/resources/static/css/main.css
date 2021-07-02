@@ -1,9 +1,26 @@
 @charset "UTF-8";
 
-h1{
-    color:#0000FF;
+h1 {
+  color: #0000ff;
 }
 
-h2{
-    color:#FF0000;
+h2 {
+  color: #ff0000;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
