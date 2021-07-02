@@ -46,14 +46,9 @@ public class WorkShop {
 	
 public static void main(String[] args) throws IOException, Exception {
 		
-	
-		
-<<<<<<< Updated upstream
+
 		Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
-=======
-		Table df = Table.read().csv("src/main/resources/static/Wuzzuf_Jobs.csv");
->>>>>>> Stashed changes
-		
+
 	System.out.println(df.summary().print());
 	
 		//System.out.println(df.structure().printAll());
