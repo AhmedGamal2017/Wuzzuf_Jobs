@@ -22,6 +22,7 @@ public class DEMO {
 //		System.out.println(d2.getMostPopular(df2, "Title"));
 //		System.out.println(d2.getMostPopular(df2, "Location"));
 //		System.out.println(d2.getMostPopularSkills(df2));
+		System.out.println(d2.factorizeYearsExp(df2));
 		
 		
 		VisualizeData d3 = new VisualizeData();
