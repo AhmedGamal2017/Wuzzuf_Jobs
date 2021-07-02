@@ -3,9 +3,11 @@ package com.javaProject.jProject;
 import static tech.tablesaw.aggregate.AggregateFunctions.count;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import tech.tablesaw.api.IntColumn;
 import tech.tablesaw.api.Row;
+
 import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.api.Table;
 
@@ -89,9 +91,27 @@ public class ManipulateData implements IManipulateData {
 		factorize.toArray(factorize_Array);
 
 		IntColumn factorized_exp = IntColumn.create("Factorized Experience", factorize_Array);
-		
+
 		return data.addColumns(factorized_exp);
 
+	}
+
+	@Override
+	public List<WuzzufJob> convertTable2List(Table data) {
+		// TODO
+		List<WuzzufJob> jobs = new ArrayList<WuzzufJob>();
+		for (Row row : data) {
+			jobs.add(new WuzzufJob(
+					row.getString(0), 
+					row.getString(1), 
+					row.getString(2), 
+					row.getString(3), 
+					row.getString(4), 
+					row.getString(5), 
+					row.getString(6), 
+					row.getString(7)));
+		}
+		return jobs;
 	}
 
 }
