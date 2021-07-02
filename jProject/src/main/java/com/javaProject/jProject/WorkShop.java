@@ -56,6 +56,7 @@ public class WorkShop {
 		////////////////////////////////////////////////////////
 
 		List<List<String>> arr = new ArrayList<>();
+
 		Table skills = dfCleaned.select("Skills");
 
 		for (Row row : skills) {
