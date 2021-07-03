@@ -48,13 +48,10 @@ public static void main(String[] args) throws IOException, Exception {
 		
 	
 		
-<<<<<<< Updated upstream
+
 		Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
-=======
-		Table df = Table.read().csv("src/main/resources/static/Wuzzuf_Jobs.csv");
->>>>>>> Stashed changes
 		
-	System.out.println(df.summary().print());
+	//System.out.println(df.summary().print());
 	
 		//System.out.println(df.structure().printAll());
 
@@ -115,9 +112,9 @@ public static void main(String[] args) throws IOException, Exception {
 	 
 	//////////////////////////////////////////////////////////// 
 	 
-	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
+	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company","Title").sortDescendingOn("Count [Title]");
 	 
-	//System.out.println(companyJobs);
+	System.out.println(companyJobs);
 	 
 	// Plot.show(
 			// PiePlot.create("Most demanding companies", companyJobs, "Company", "Count [Title]"));
@@ -173,7 +170,7 @@ public static void main(String[] args) throws IOException, Exception {
 	   
      data=data.merge(IntVector.of("Experience years", labels));
      
-		System.out.println(data);
+	//	System.out.println(data);
 	 
 	 ////////////////////////////////////////////////////////////
      
