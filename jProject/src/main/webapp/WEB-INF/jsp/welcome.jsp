@@ -18,6 +18,7 @@
 <c:url value="/css/main.css" var="jstlCss" />
 <link href="${jstlCss}" rel="stylesheet" />
 
+
 </head>
 <body>
 
@@ -36,11 +37,6 @@
 	</nav>
 
 	<div class="container">
-
-		<div class="starter-template">
-			<h1>Spring Boot Web JSP Example</h1>
-			<h2>Message: ${message}</h2>
-		</div>
 		<table>
 			<tr>
 				<th>Title</th>

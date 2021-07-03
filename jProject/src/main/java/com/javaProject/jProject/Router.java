@@ -8,50 +8,41 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import tech.tablesaw.api.Table;
+
 @Controller
 public class Router {
-	
+
 //	@Value("${welcome.message:message}")
 	private String message = "Hello World";
-	
+
 //	@Value("${welcome.jobs:jobs}")
 	private List<WuzzufJob> jobs = new ArrayList<WuzzufJob>();
-	
-	
-//	@RequestMapping("/gamal")
-//	public String gamal(
-//			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
-//	{return "Gamal Page";}
-//	
-//	@RequestMapping("/mady")
-//	public String mady(
-//			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
-//	{return "Mady Page";}
-//	
-//	@RequestMapping("/atef")
-//	public String atef(
-//			/* "send  parameter" @RequestParam(value = "test", defaultValue = "non") String val */ ) 
-//	{return "Atef Page";}
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		WuzzufJob wj = new WuzzufJob("1","2","3","4","5","6","7","12,2,2");
-		jobs.add(wj);
-		jobs.add(wj);
-		jobs.add(wj);
-		jobs.add(wj);
-		jobs.add(wj);
-		jobs.add(wj);
-		jobs.add(wj);
-		model.put("message", this.message);
+		Table df1 = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
+		PrepareData d1 = new PrepareData();
+		Table df2 = d1.cleanData(df1);
+		ManipulateData d2 = new ManipulateData();
+
+		jobs = d2.convertTable2List(df1);
+
 		model.put("jobs", jobs);
 		return "welcome";
 	}
 
 	@RequestMapping("/next")
 	public String next(Map<String, Object> model) {
-		model.put("message", "You are in new page !!");
-		return "next";
+		Table df1 = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
+		PrepareData d1 = new PrepareData();
+		Table df2 = d1.cleanData(df1);
+		ManipulateData d2 = new ManipulateData();
+
+		jobs = d2.convertTable2List(df1);
+
+		model.put("jobs", jobs);
+		return "index";
 	}
 
 }
