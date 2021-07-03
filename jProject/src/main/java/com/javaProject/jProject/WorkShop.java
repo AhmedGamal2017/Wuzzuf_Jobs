@@ -112,9 +112,9 @@ public static void main(String[] args) throws IOException, Exception {
 	 
 	//////////////////////////////////////////////////////////// 
 	 
-	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company","Title").sortDescendingOn("Count [Title]");
+	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
 	 
-	System.out.println(companyJobs);
+	//System.out.println(companyJobs);
 	 
 	// Plot.show(
 			// PiePlot.create("Most demanding companies", companyJobs, "Company", "Count [Title]"));
