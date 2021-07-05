@@ -1,7 +1,6 @@
-# Wuzzuf Jobs - Bounce
+# Wuzzuf Jobs - GUI
 
-this is the Bounce branch of the project wuzzuf job
-for making some of bounces which are :
+this is the graphic user interface branch of the project wuzzuf job
 
 -
 -
