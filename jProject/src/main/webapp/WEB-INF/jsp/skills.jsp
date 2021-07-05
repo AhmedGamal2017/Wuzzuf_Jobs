@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -35,7 +35,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto h-100">
 						<li class="nav-item">
-							<a class="nav-link active" href="/">
+							<a class="nav-link" href="/">
 								<i class="fas fa-home"></i> Home
 							</a>
 						</li>
@@ -50,12 +50,12 @@
 								<a class="dropdown-item" href="/original">Original Data</a>
 								<a class="dropdown-item" href="/cleaned">Cleaned Data</a>
 								<a class="dropdown-item" href="/structure">Structure of Data</a>
-								<a class="dropdown-item active" href="/summary">Summary of Data</a>
+								<a class="dropdown-item" href="/summary">Summary of Data</a>
 							</div>
 						</li>
 							
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
 								role="button" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false"> <i class="fas fa-tachometer-alt"></i> <span>
 									Statistics <i class="fas fa-angle-down"></i>
@@ -65,7 +65,7 @@
 								<a class="dropdown-item" href="/trendcomp">Most Demanding Companies</a>
 								<a class="dropdown-item" href="/trendjob">Popular Jobs</a>
 								<a class="dropdown-item" href="/trendarea">Popular Areas</a>
-								<a class="dropdown-item" href="/trendskill">Skills</a>
+								<a class="dropdown-item active" href="/trendskill">Skills</a>
 							</div>
 						</li>
 							

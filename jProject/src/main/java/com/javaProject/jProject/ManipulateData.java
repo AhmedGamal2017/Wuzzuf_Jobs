@@ -102,15 +102,8 @@ public class ManipulateData implements IManipulateData {
 		// TODO
 		List<WuzzufJob> jobs = new ArrayList<WuzzufJob>();
 		for (Row row : data) {
-			jobs.add(new WuzzufJob(
-					row.getString(0), 
-					row.getString(1), 
-					row.getString(2), 
-					row.getString(3), 
-					row.getString(4), 
-					row.getString(5), 
-					row.getString(6), 
-					row.getString(7)));
+			jobs.add(new WuzzufJob(row.getString(0), row.getString(1), row.getString(2), row.getString(3),
+					row.getString(4), row.getString(5), row.getString(6), row.getString(7)));
 		}
 		return jobs;
 	}
@@ -122,9 +115,11 @@ public class ManipulateData implements IManipulateData {
 		for (Row row : data) {
 			List<String> line = new ArrayList<String>();
 			for (int i = 0; i < row.columnCount(); i++) {
-				if(row.getColumnType(row.columnNames().get(i)) == ColumnType.INTEGER) {
+				if (row.getColumnType(row.columnNames().get(i)) == ColumnType.INTEGER) {
 					line.add(Integer.toString(row.getInt(i)));
-				}else {
+				} else if (row.getColumnType(row.columnNames().get(i)) == ColumnType.DOUBLE) {
+					line.add(Double.toString(row.getDouble(i)));
+				} else {
 					line.add(row.getString(i));
 				}
 			}
