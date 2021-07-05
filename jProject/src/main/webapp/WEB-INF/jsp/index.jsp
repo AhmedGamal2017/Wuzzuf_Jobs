@@ -70,11 +70,7 @@
 									class="dropdown-item" href="#">Customize</a>
 							</div></li>
 					</ul>
-					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link d-block"
-							href="login.html"> Admin, <b>Logout</b>
-						</a></li>
-					</ul>
+					
 				</div>
 			</div>
 
@@ -83,7 +79,7 @@
 			<div class="row">
 				<div class="col">
 					<p class="text-white mt-5 mb-5">
-						Welcome back, <b>Admin</b>
+					 <b></b>
 					</p>
 				</div>
 			</div>
@@ -252,6 +248,7 @@
 									<th scope="col">Level</th>
 									<th scope="col">Years of Exp</th>
 									<th scope="col">Country</th>
+									<th scope="col">Skills</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -264,6 +261,7 @@
 										<td>${job.getLevel()}</td>
 										<td>${job.getYearsExp()}</td>
 										<td>${job.getCountry()}</td>
+										<td>${job.getSkillsS()}</td>
 									</tr>
 								</c:forEach>
 							</tbody>

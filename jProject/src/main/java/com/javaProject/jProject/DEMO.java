@@ -12,8 +12,8 @@ public class DEMO {
 		
 //		System.out.println(d1.viewData(df1));
 //		System.out.println(d1.summaryOfData(df1));
-//		System.out.println(d1.structureOfData(df1));		
-		Table df2 = d1.cleanData(df1);
+		System.out.println(d1.structureOfData(df1));		
+//		Table df2 = d1.cleanData(df1);
 		
 		
 		ManipulateData d2 = new ManipulateData();
@@ -22,7 +22,7 @@ public class DEMO {
 //		System.out.println(d2.getMostPopular(df2, "Title"));
 //		System.out.println(d2.getMostPopular(df2, "Location"));
 //		System.out.println(d2.getMostPopularSkills(df2));
-		System.out.println(d2.factorizeYearsExp(df2));
+//		System.out.println(d2.factorizeYearsExp(df2));
 		
 		
 		VisualizeData d3 = new VisualizeData();

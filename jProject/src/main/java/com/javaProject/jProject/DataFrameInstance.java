@@ -21,7 +21,7 @@ public class DataFrameInstance {
 
 	public Table getTable(String csvFilePath) {
 		try {
-			System.out.println(csvFilePath);
+//			System.out.println(csvFilePath);
 			return Table.read().csv(csvFilePath);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
