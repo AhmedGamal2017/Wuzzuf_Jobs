@@ -5,6 +5,7 @@ import static tech.tablesaw.aggregate.AggregateFunctions.count;
 import java.util.ArrayList;
 import java.util.List;
 
+import tech.tablesaw.api.ColumnType;
 import tech.tablesaw.api.IntColumn;
 import tech.tablesaw.api.Row;
 
@@ -121,7 +122,11 @@ public class ManipulateData implements IManipulateData {
 		for (Row row : data) {
 			List<String> line = new ArrayList<String>();
 			for (int i = 0; i < row.columnCount(); i++) {
-				line.add(row.getString(i));
+				if(row.getColumnType(row.columnNames().get(i)) == ColumnType.INTEGER) {
+					line.add(Integer.toString(row.getInt(i)));
+				}else {
+					line.add(row.getString(i));
+				}
 			}
 			list.add(line);
 		}

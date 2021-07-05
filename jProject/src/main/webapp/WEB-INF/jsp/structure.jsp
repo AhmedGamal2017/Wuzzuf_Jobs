@@ -62,7 +62,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> <i class="fas fa-medal"></i> <span>
-									Bounce <i class="fas fa-angle-down"></i>
+									Bonus <i class="fas fa-angle-down"></i>
 								</span>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,7 +90,7 @@
 				<div class="col-12 tm-block-col">
 					<div
 						class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-						<h2 class="tm-block-title">Data Summary</h2>
+						<h2 class="tm-block-title">Data Structure</h2>
 						<table class="table">
 							<thead>
 								<tr>

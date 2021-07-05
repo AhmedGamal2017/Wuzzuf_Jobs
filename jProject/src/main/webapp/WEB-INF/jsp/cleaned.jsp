@@ -62,7 +62,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> <i class="fas fa-medal"></i> <span>
-									Bounce <i class="fas fa-angle-down"></i>
+									Bonus <i class="fas fa-angle-down"></i>
 								</span>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">

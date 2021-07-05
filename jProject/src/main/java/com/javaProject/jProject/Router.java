@@ -68,11 +68,15 @@ public class Router {
 		Table df2 = d1.summaryOfData(df1);
 		ManipulateData d2 = new ManipulateData();
 
+		listHeads.clear();
 		listHeads = d2.getTableHeads(df2);
+		
+		list.clear();
 		list = d2.convertTable2StringList(df2);
 
 		model.put("dataHeads", listHeads);
 		model.put("data", list);
+		
 		return "summary";
 	}
 
@@ -83,9 +87,12 @@ public class Router {
 		Table df2 = d1.structureOfData(df1);
 		ManipulateData d2 = new ManipulateData();
 
+		listHeads.clear();
 		listHeads = d2.getTableHeads(df2);
+		
+		list.clear();
 		list = d2.convertTable2StringList(df2);
-
+//
 		model.put("dataHeads", listHeads);
 		model.put("data", list);
 		return "structure";
