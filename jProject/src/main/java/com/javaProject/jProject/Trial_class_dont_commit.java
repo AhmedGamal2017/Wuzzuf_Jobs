@@ -2,6 +2,8 @@ package com.javaProject.jProject;
 
 
 import tech.tablesaw.api.NumberColumn;
+import tech.tablesaw.api.IntColumn;
+import tech.tablesaw.api.Row;
 import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.plotly.Plot;
@@ -13,7 +15,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;   
+import java.util.List;
+
+
+  
 
 public class Trial_class_dont_commit {
 
@@ -157,6 +162,22 @@ public class Trial_class_dont_commit {
 //		Plot.show(PiePlot.create("All Companies", t7, "Company", "Count [Title]"));
 //		Plot.show(PiePlot.create("Companies with Greater than 10 titles", t5, "Company", "Count [Title]"));
 //		Plot.show(PiePlot.create("Companies with Less than 10 titles", t6, "Company", "Count [Title]"));
+		
+//		Methods2 t = new Methods2();
+//		int[] factorize = new int[4380];
+//		ArrayList<Integer> factorize = new ArrayList<>();		
+//		
+//		for (Row row : df2) { 
+//		    String s = row.getString("YearsExp");	   		    
+//		    factorize.add(t.extractMaximum(s)) ;
+//		}
+//		
+//		Integer[] factorize_Array = new Integer[factorize.size()];
+//		factorize.toArray(factorize_Array); 
+//		
+//		IntColumn  factorized_exp = IntColumn.create("Factorized Experience", factorize_Array);
+//		df2.addColumns(factorized_exp);
+//		System.out.println(df2);
 		
 	}
 

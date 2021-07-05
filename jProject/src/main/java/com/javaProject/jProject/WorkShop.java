@@ -13,7 +13,6 @@ import org.apache.commons.csv.CSVFormat;
 import smile.data.vector.StringVector;
 import tech.tablesaw.api.Table;
 
-
 //import org.apache.commons.csv.CSVFormat;
 
 import smile.data.DataFrame;
@@ -40,16 +39,9 @@ import tech.tablesaw.api.DateColumn;
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.StringColumn;
 
-
-
 public class WorkShop {
-	
-	
-	
-public static void main(String[] args) throws IOException, Exception {
-		
-	
-		
+
+	public static void main(String[] args) throws IOException, Exception {
 
 		Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
 		
@@ -68,34 +60,30 @@ public static void main(String[] args) throws IOException, Exception {
 		
  
 	List<List<String>> arr = new ArrayList<>();
+
 		Table skills = dfCleaned.select("Skills");
-		
-		for (Row row:skills) {
-			
+
+		for (Row row : skills) {
+
 			String[] str = row.toString().split(",");
-			
-			for(String j:str) {
-			
+
+			for (String j : str) {
+
 				String[] str2 = j.toString().split(",");
-				
-			 arr.add(Arrays.asList(str2));	 
-		}}
-		
-		
+
+				arr.add(Arrays.asList(str2));
+			}
+		}
+
 		String str[] = new String[arr.size()];
-		
-			for (int j = 0; j < arr.size(); j++) {
-				 
-				
-	            str[j] = arr.get(j).toString();}
-			   
-		
-		
-		
-		StringColumn column = StringColumn.create("Skills",str);
-		
-			
-			
+
+		for (int j = 0; j < arr.size(); j++) {
+
+			str[j] = arr.get(j).toString();
+		}
+
+		StringColumn column = StringColumn.create("Skills", str);
+
 		Table t = Table.create("Skills", column);
 			
 			
