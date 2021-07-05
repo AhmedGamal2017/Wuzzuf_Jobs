@@ -15,7 +15,7 @@
 <link href="${mainCss}" rel="stylesheet" />
 
 
-<title>Insert title here</title>
+<title>Wuzzuf Jobs</title>
 
 </head>
 <body id="reportsPage">
@@ -34,8 +34,8 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto h-100">
-						<li class="nav-item"><a class="nav-link active" href="#">
-								<i class="fas fa-tachometer-alt"></i> Dashboard <span
+						<li class="nav-item"><a class="nav-link active" href="/">
+								<i class="fas fa-home"></i> Home <span
 								class="sr-only">(current)</span>
 						</a></li>
 						<li class="nav-item dropdown"><a
@@ -46,35 +46,36 @@
 							</span>
 						</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/">Daily Report</a> <a
-									class="dropdown-item" href="#">Weekly Report</a> <a
-									class="dropdown-item" href="#">Yearly Report</a>
+								<a class="dropdown-item" href="/original">Original Data</a>
+								<a class="dropdown-item" href="/cleaned">Cleaned Data</a>
+								<a class="dropdown-item" href="/structure">Structure of Data</a>
+								<a class="dropdown-item active" href="/summary">Summary of Data</a>
 							</div></li>
-						<li class="nav-item"><a class="nav-link" href="products.html">
-								<i class="fas fa-shopping-cart"></i> Products
+						<li class="nav-item"><a class="nav-link" href="/piechart">
+								<i class="fas fa-chart-pie"></i> Pie Chart
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="accounts.html">
-								<i class="far fa-user"></i> Accounts
+						<li class="nav-item"><a class="nav-link" href="/barchart">
+								<i class="far fa-chart-bar"></i> Bar Chart
 						</a></li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false"> <i class="fas fa-cog"></i> <span>
-									Settings <i class="fas fa-angle-down"></i>
-							</span>
-						</a>
+							aria-expanded="false"> <i class="fas fa-medal"></i> <span>
+									Bounce <i class="fas fa-angle-down"></i>
+								</span>
+							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Profile</a> <a
-									class="dropdown-item" href="#">Billing</a> <a
-									class="dropdown-item" href="#">Customize</a>
+								<a class="dropdown-item" href="/factorization">Factorization</a>
+								<a class="dropdown-item" href="/kmeans">K-means</a>
 							</div></li>
 					</ul>
-					
+
 				</div>
 			</div>
 
 		</nav>
+		
 		<div class="container">
 			<div class="row">
 				<div class="col">

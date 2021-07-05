@@ -11,4 +11,6 @@ public interface IManipulateData {
 	public Table factorizeYearsExp(Table data);
 	
 	public List<WuzzufJob> convertTable2List(Table data);
+	public List<List<String>> convertTable2StringList(Table data);
+	public List<String> getTableHeads(Table data);
 }

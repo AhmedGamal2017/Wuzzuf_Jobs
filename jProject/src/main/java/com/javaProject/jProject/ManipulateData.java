@@ -114,4 +114,29 @@ public class ManipulateData implements IManipulateData {
 		return jobs;
 	}
 
+	@Override
+	public List<List<String>> convertTable2StringList(Table data) {
+		// TODO
+		List<List<String>> list = new ArrayList<List<String>>();
+		for (Row row : data) {
+			List<String> line = new ArrayList<String>();
+			for (int i = 0; i < row.columnCount(); i++) {
+				line.add(row.getString(i));
+			}
+			list.add(line);
+		}
+		return list;
+	}
+
+	@Override
+	public List<String> getTableHeads(Table data) {
+		// TODO
+		List<String> heads = new ArrayList<String>();
+		for (Row row : data) {
+			heads = row.columnNames();
+			break;
+		}
+		return heads;
+	}
+
 }
