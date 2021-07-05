@@ -2,6 +2,7 @@ package com.javaProject.jProject;
 
 import java.io.FileOutputStream;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +24,7 @@ import smile.io.Read;
 
 import tech.tablesaw.table.Relation;
 import tech.tablesaw.table.TableSliceGroup;
+import tech.tablesaw.plotly.api.ScatterPlot;
 
 import static tech.tablesaw.aggregate.AggregateFunctions.*;
 import tech.tablesaw.plotly.Plot;
@@ -42,20 +44,22 @@ public class WorkShop {
 	public static void main(String[] args) throws IOException, Exception {
 
 		Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
+		
+	//System.out.println(df.summary().print());
+	
+		//System.out.println(df.structure().printAll());
 
-		System.out.println(df.summary().print());
-
-		// System.out.println(df.structure().printAll());
-
-		// Table dfNoNull= df.dropRowsWithMissingValues();
-
-		Table dfCleaned = df.dropRowsWithMissingValues().dropDuplicateRows();
-
-		// System.out.println(dfCleaned.summary());
-
-		////////////////////////////////////////////////////////
-
-		List<List<String>> arr = new ArrayList<>();
+		//Table dfNoNull= df.dropRowsWithMissingValues();
+		
+	 Table dfCleaned   = df.dropRowsWithMissingValues().dropDuplicateRows();
+	 
+	//System.out.println(dfCleaned.summary());
+	 
+	 /////////////////////////////////////////////////////////
+	 
+		
+ 
+	List<List<String>> arr = new ArrayList<>();
 
 		Table skills = dfCleaned.select("Skills");
 
@@ -81,73 +85,95 @@ public class WorkShop {
 		StringColumn column = StringColumn.create("Skills", str);
 
 		Table t = Table.create("Skills", column);
+			
+			
+		Table jobSkills = t.summarize("Skills", count).by("Skills").sortDescendingOn("Count [Skills]");	
+		
+		
+		//System.out.println(jobSkills);
+		
+		/*Plot.show(
+	     VerticalBarPlot.create(
+	     "Most required skills", // plot title
+	         jobSkills, // table
+	         "Skills", // grouping column name
+	         "Count [Skills]")); // numeric column name */
+		
+	 
+	//////////////////////////////////////////////////////////// 
+	 
+	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
 
-		Table jobSkills = t.summarize("Skills", count).by("Skills").sortDescendingOn("Count [Skills]");
+	 
+	//System.out.println(companyJobs);
+	
+	Table L = companyJobs.inRange(20);
+	System.out.println(L);
 
-		// System.out.println(jobSkills);
+	 
+	// Plot.show(
+			// PiePlot.create("Most demanding companies", companyJobs, "Company", "Count [Title]"));
+	 
+     /////////////////////////////////////////////
+	 
+	 Table jobTitles = dfCleaned.summarize("Title", count).by("Title").sortDescendingOn("Count [Title]");
+	 
+	 // System.out.println(jobTitles);
+	 
+	/* Plot.show(
+     VerticalBarPlot.create(
+     "Most popular job titles", // plot title
+         jobTitles, // table
+         "Title", // grouping column name
+         "Count [Title]")); // numeric column name */
+	 
+	 ///////////////////////////////////////////////////////
+	 
+	 Table areas = dfCleaned.summarize("Location", count).by("Location").sortDescendingOn("Count [Location]");
+	 
+		//System.out.println(areas);
 
-		/*
-		 * Plot.show( VerticalBarPlot.create( "Most required skills", // plot title
-		 * jobSkills, // table "Skills", // grouping column name "Count [Skills]")); //
-		 * numeric column name
-		 */
+	 
+	 /*Plot.show(
+     VerticalBarPlot.create(
+     "Most popular areas", // plot title
+         areas, // table
+         "Location", // grouping column name
+         "Count [Location]")); // numeric column name  */
+	 
+	 
+	///////////////////////////////////////////////////////	
+	 
+	 CSVFormat format = CSVFormat.DEFAULT.withFirstRecordAsHeader();
+		
+	   
+		DataFrame data = Read.csv("src/main/resources/static/Wuzzuf_Jobs.csv",format) ;
+		
+       
+		
+		 DataFrame yearsOfExp= data.select("Level");
+	        
+         DataFrame yearsOfExpNotNull = yearsOfExp.omitNullRows();
+	 
+	 
+	
+	 StringVector exp = yearsOfExpNotNull.stringVector("Level");
+	 
+	 String[] values = exp.distinct().toArray(new String[]{});
+	 
+	 int[] labels = exp.factorize(new NominalScale(values)).toIntArray(); 
+	   
+     data=data.merge(IntVector.of("Experience years", labels));
+     
+	//	System.out.println(data);
+	 
+	 ////////////////////////////////////////////////////////////
+     
+  
 
-		////////////////////////////////////////////////////////////
-
-		Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
-
-		// System.out.println(companyJobs);
-
-		// Plot.show(
-		// PiePlot.create("Most demanding companies", companyJobs, "Company", "Count
-		// [Title]"));
-
-		/////////////////////////////////////////////
-
-		Table jobTitles = dfCleaned.summarize("Title", count).by("Title").sortDescendingOn("Count [Title]");
-
-		// System.out.println(jobTitles);
-
-		/*
-		 * Plot.show( VerticalBarPlot.create( "Most popular job titles", // plot title
-		 * jobTitles, // table "Title", // grouping column name "Count [Title]")); //
-		 * numeric column name
-		 */
-
-		///////////////////////////////////////////////////////
-
-		Table areas = dfCleaned.summarize("Location", count).by("Location").sortDescendingOn("Count [Location]");
-
-		// System.out.println(areas);
-
-		/*
-		 * Plot.show( VerticalBarPlot.create( "Most popular areas", // plot title areas,
-		 * // table "Location", // grouping column name "Count [Location]")); // numeric
-		 * column name
-		 */
-
-		///////////////////////////////////////////////////////
-
-		CSVFormat format = CSVFormat.DEFAULT.withFirstRecordAsHeader();
-
-		DataFrame data = Read.csv("src/main/resources/static/Wuzzuf_Jobs.csv", format);
-
-		DataFrame yearsOfExp = data.select("Level");
-
-		DataFrame yearsOfExpNotNull = yearsOfExp.omitNullRows();
-
-		StringVector exp = yearsOfExpNotNull.stringVector("Level");
-
-		String[] values = exp.distinct().toArray(new String[] {});
-
-		int[] labels = exp.factorize(new NominalScale(values)).toIntArray();
-
-		data = data.merge(IntVector.of("Experience years", labels));
-
-		System.out.println(data);
-
-		////////////////////////////////////////////////////////////
-
-	}
+    
+      
+	 
+}
 
 }
