@@ -2,6 +2,7 @@ package com.javaProject.jProject;
 
 import java.io.FileOutputStream;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +25,7 @@ import smile.io.Read;
 
 import tech.tablesaw.table.Relation;
 import tech.tablesaw.table.TableSliceGroup;
+import tech.tablesaw.plotly.api.ScatterPlot;
 
 import static tech.tablesaw.aggregate.AggregateFunctions.*;
 import tech.tablesaw.plotly.Plot;
@@ -113,8 +115,13 @@ public static void main(String[] args) throws IOException, Exception {
 	//////////////////////////////////////////////////////////// 
 	 
 	 Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
+
 	 
 	//System.out.println(companyJobs);
+	
+	Table L = companyJobs.inRange(20);
+	System.out.println(L);
+
 	 
 	// Plot.show(
 			// PiePlot.create("Most demanding companies", companyJobs, "Company", "Count [Title]"));
