@@ -34,7 +34,7 @@ public class DEMO {
 //		System.out.println(d2.getMostPopular(df2, "Title"));
 //		System.out.println(d2.getMostPopular(df2, "Location"));
 //		System.out.println(d2.getMostPopularSkills(df2));
-		System.out.println(d2.factorizeYearsExp(df2));
+//		System.out.println(d2.factorizeYearsExp(df2));
 
 		VisualizeData d3 = new VisualizeData();
 
@@ -42,6 +42,7 @@ public class DEMO {
 //		d3.displayBarChart(df2, "Location");
 //		d3.displayPieChart(df2);
 //		System.out.println(d3.displayTable(df2));
+		d3.displaySkillsBarChart(d2.getMostPopularSkills(df2));
 
 	}
 
