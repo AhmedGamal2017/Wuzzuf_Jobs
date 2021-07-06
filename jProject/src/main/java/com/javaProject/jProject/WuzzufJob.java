@@ -170,5 +170,9 @@ public class WuzzufJob {
 	private String[] extractSkills(String skills) {
 		return skills.split(",");
 	}
+	
+	public String getSkillsS() {
+		return String.join(", ", skills);
+	}
 
 }
