@@ -704,6 +704,6 @@ input[type="checkbox"]:focus {
   }
   #barChart,
   #lineChart {
-    max-height: 350px;
+    /* max-height: 350px; */
   }
 }

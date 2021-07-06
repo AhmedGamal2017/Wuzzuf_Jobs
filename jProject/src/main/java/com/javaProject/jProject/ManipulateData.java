@@ -99,7 +99,6 @@ public class ManipulateData implements IManipulateData {
 
 	@Override
 	public List<WuzzufJob> convertTable2List(Table data) {
-		// TODO
 		List<WuzzufJob> jobs = new ArrayList<WuzzufJob>();
 		for (Row row : data) {
 			jobs.add(new WuzzufJob(row.getString(0), row.getString(1), row.getString(2), row.getString(3),
@@ -110,7 +109,6 @@ public class ManipulateData implements IManipulateData {
 
 	@Override
 	public List<List<String>> convertTable2StringList(Table data) {
-		// TODO
 		List<List<String>> list = new ArrayList<List<String>>();
 		for (Row row : data) {
 			List<String> line = new ArrayList<String>();
@@ -130,7 +128,6 @@ public class ManipulateData implements IManipulateData {
 
 	@Override
 	public List<String> getTableHeads(Table data) {
-		// TODO
 		List<String> heads = new ArrayList<String>();
 		for (Row row : data) {
 			heads = row.columnNames();

@@ -109,6 +109,26 @@
 			<!-- row -->
 			<div class="row tm-content-row">
 
+				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
+					<div class="tm-bg-primary-dark tm-block tm-block-taller">
+						<h2 class="tm-block-title">All Companies</h2>
+						<div id="allCompChartContainer">
+							<canvas id="allCompChart" class="chartjs-render-monitor" width="200"
+								height="200"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
+					<div class="tm-bg-primary-dark tm-block tm-block-taller">
+						<h2 class="tm-block-title">Companies with more than 10 titles</h2>
+						<div id="confCompChartContainer">
+							<canvas id="confCompChart" class="chartjs-render-monitor" width="200"
+								height="200"></canvas>
+						</div>
+					</div>
+				</div>
+
 				<div class="col-12 tm-block-col">
 					<div
 						class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
@@ -132,9 +152,6 @@
 							</tbody>
 						</table>
 					</div>
-					<a href="/trendcompchart"
-						class="btn btn-primary btn-block text-uppercase mb-3">Show
-						Chart for This Table</a>
 				</div>
 			</div>
 		</div>
@@ -156,18 +173,66 @@
 	<!-- https://getbootstrap.com/ -->
 	<script src="js/tooplate-scripts.js"></script>
 	<script type="text/javascript">
-	 $.ajax({
-         url: '/trendjobchart',
-         type: 'get',
-         success: function (res) {
-             if (res.state == "success") {
-            	 console.log(res.data)
-             };
-         },
-         error: function (err) {
-             console.log("Failed")
-         }
-     })
+		Chart.defaults.global.defaultFontColor = 'white';
+		let ctxPie, optionsPie, configPie, pieChart;
+
+		var labels, values, coloR;
+
+		$(document).ready(function() {
+			$.ajax({
+				url : "/getallcomp",
+				method : "GET",
+				success : function(data) {
+					labels = data.data["labels"];
+					values = data.data["values"];
+					coloR = [];
+
+					var dynamicColors = function() {
+						var r = Math.floor(Math.random() * 255);
+						var g = Math.floor(Math.random() * 255);
+						var b = Math.floor(Math.random() * 255);
+						return "rgb(" + r + "," + g + "," + b + ")";
+					};
+
+					for ( var i in labels) {
+						coloR.push(dynamicColors());
+					}
+
+					drawPieChart(labels, values, coloR, "allCompChart"); // Pie Chart
+				},
+				error : function(data) {
+
+					console.log(data);
+				},
+			});
+
+			$.ajax({
+				url : "/confcompchart",
+				method : "GET",
+				success : function(data) {
+					labels = data.data["labels"];
+					values = data.data["values"];
+					coloR = [];
+
+					var dynamicColors = function() {
+						var r = Math.floor(Math.random() * 255);
+						var g = Math.floor(Math.random() * 255);
+						var b = Math.floor(Math.random() * 255);
+						return "rgb(" + r + "," + g + "," + b + ")";
+					};
+
+					for ( var i in labels) {
+						coloR.push(dynamicColors());
+					}
+
+					drawPieChart(labels, values, coloR, "confCompChart"); // Pie Chart
+				},
+				error : function(data) {
+
+					console.log(data);
+				},
+			});
+		});
 	</script>
 </body>
 

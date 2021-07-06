@@ -110,6 +110,15 @@
 			</div>
 			<!-- row -->
 			<div class="row tm-content-row">
+				
+				<div class="col-12 tm-block-col">
+				
+					<div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+						<h2 class="tm-block-title">Most Popular Areas Chart</h2>
+						<canvas id="barChart" width="800" height="2000"></canvas>
+					</div>
+					
+				</div>
 
 				<div class="col-12 tm-block-col">
 					<div
@@ -134,9 +143,6 @@
 							</tbody>
 						</table>
 					</div>
-					<a href=""
-						class="btn btn-primary btn-block text-uppercase mb-3">Show
-						Chart for This Table</a>
 				</div>
 			</div>
 		</div>
@@ -158,6 +164,43 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- https://getbootstrap.com/ -->
 	<script src="js/tooplate-scripts.js"></script>
+	<script type="text/javascript">
+		Chart.defaults.global.defaultFontColor = "white";
+		let ctxBar, optionsBar, configBar, barChart;
+
+		var labels, values, coloR;
+
+		$(document).ready(function () {
+			$.ajax({
+				url: "/trendareachart",
+				method: "GET",
+				success: function (data) {
+					labels = data.data["labels"];
+					values = data.data["values"];
+					coloR = [];
+
+					var dynamicColors = function () {
+						var r = Math.floor(Math.random() * 255);
+						var g = Math.floor(Math.random() * 255);
+						var b = Math.floor(Math.random() * 255);
+						return "rgb(" + r + "," + g + "," + b + ")";
+					};
+
+					for (var i in labels) {
+						coloR.push(dynamicColors());
+					}
+
+					drawBarChart(labels, values, coloR,"Count [Location]", "Location");
+				},
+				error: function (data) {
+					console.log(data);
+				},
+			});
+		});
+		// $(window).resize(function() {
+		// 	updateBarChart();
+		// });
+	</script>
 </body>
 
 </html>
