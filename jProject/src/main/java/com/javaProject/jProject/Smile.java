@@ -23,13 +23,13 @@ import tech.tablesaw.plotly.api.ScatterPlot;
 public class Smile {
 	
 	
-	
-public static void main(String[] args) throws IOException, Exception {
+	public void cluster(String path)  throws IOException, Exception{		
+		
 		
 		CSVFormat format = CSVFormat.DEFAULT.withFirstRecordAsHeader();
 		
 		   
-		DataFrame data = Read.csv("src//main//resources//static//Wuzzuf_Jobs.csv",format) ;
+		DataFrame data = Read.csv(path,format) ;
 		
 		//System.out.println(data);
 		
@@ -65,7 +65,7 @@ public static void main(String[] args) throws IOException, Exception {
         String[] C= company.toStringArray();
        
        
-       Table df = Table.read().csv("src//main//resources//static//Wuzzuf_Jobs.csv");
+       Table df = Table.read().csv(path);
        
        Table dfCleaned   = df.dropRowsWithMissingValues().dropDuplicateRows();
        Table companyJobs = dfCleaned.summarize("Title", count).by("Company").sortDescendingOn("Count [Title]");
@@ -83,51 +83,51 @@ public static void main(String[] args) throws IOException, Exception {
 					
 					if(C[i]=="Confidential") {
 						
-					s[i]= 1100;
+					s[i]= 11000;
 					}
 					else if(C[i]=="Mishkat Nour")	{
 						
-						s[i]= 1000;
+						s[i]= 10000;
 						
 				}    
 					else if(C[i]=="Expand Cart")	{
 						
-						s[i]= 900;
+						s[i]= 9000;
 						
 				}    
 					else if(C[i]=="EGIC")	{
 	
-						s[i]= 800;
+						s[i]= 8000;
 	
 					}    
 					else if(C[i]=="Aqarmap.com")	{
 	
-						s[i]= 700;
+						s[i]= 7000;
 	
 }    
 					else if(C[i]=="Majorel Egypt")	{
 	
-						s[i]= 600;
+						s[i]= 6000;
 	
 }    
 					else if(C[i]=="Ghassan Ahmed Alsulaiman for Electronic Services")	{
 	
-						s[i]= 50;
+						s[i]= 5000;
 	
 }    
 					else if(C[i]=="Flairstech")	{
 	
-						s[i]= 40;
+						s[i]= 4000;
 	
 }    
 					else if(C[i]=="Profolio Consulting")	{
 	
-						s[i]= 30;
+						s[i]= 3000;
 	
 }    
 					else if(C[i]=="OPPO Egypt")	{
 	
-						s[i]= 20;
+						s[i]= 2000;
 	
 }    
 				
