@@ -14,19 +14,19 @@ public class DEMO {
 //		System.out.println(d1.viewData(df1));
 //		System.out.println(d1.summaryOfData(df1));
 //		System.out.println(d1.structureOfData(df1));		
-//		Table df2 = d1.cleanData(df1);
+		Table df2 = d1.cleanData(df1);
 
-		for (Row row : d1.structureOfData(df1)) {
+//		for (Row row : d1.structureOfData(df1)) {
 //			System.out.println(row.columnCount());
 //			System.out.println(row.columnNames());
 //			System.out.println(row.columnNames().get(0));
-			for (int i = 0; i < row.columnCount(); i++) {
+//			for (int i = 0; i < row.columnCount(); i++) {
 //				System.out.print(row.columnNames().get(i));
 //				System.out.print(row.getString(i));
-				System.out.print(row.getColumnType(row.columnNames().get(i)));
-			}
-			System.out.println();
-		}
+//				System.out.print(row.getColumnType(row.columnNames().get(i)));
+//			}
+//			System.out.println();
+//		}
 
 		ManipulateData d2 = new ManipulateData();
 
@@ -34,7 +34,7 @@ public class DEMO {
 //		System.out.println(d2.getMostPopular(df2, "Title"));
 //		System.out.println(d2.getMostPopular(df2, "Location"));
 //		System.out.println(d2.getMostPopularSkills(df2));
-//		System.out.println(d2.factorizeYearsExp(df2));
+		System.out.println(d2.factorizeYearsExp(df2));
 
 		VisualizeData d3 = new VisualizeData();
 
