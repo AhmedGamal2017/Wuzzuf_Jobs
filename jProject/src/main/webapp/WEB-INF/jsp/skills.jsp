@@ -68,19 +68,6 @@
 								<a class="dropdown-item active" href="/trendskill">Skills</a>
 							</div>
 						</li>
-							
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"> <i class="fas fa-chart-line"></i> <span>
-									Charts <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/piechart"><i class="fas fa-chart-pie"></i> Pie Chart</a>
-								<a class="dropdown-item" href="/barchart"><i class="far fa-chart-bar"></i> Bar Chart</a>
-							</div>
-						</li>
 						
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -91,7 +78,7 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="/factorization">Factorization</a>
-								<a class="dropdown-item" href="/kmeans">K-means</a>
+								<a class="dropdown-item disabled" disabled href="/kmeans">K-means</a>
 							</div></li>
 					</ul>
 
@@ -110,6 +97,15 @@
 			</div>
 			<!-- row -->
 			<div class="row tm-content-row">
+
+				<div class="col-12 tm-block-col">
+				
+					<div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+						<h2 class="tm-block-title">Most Important Skills Chart</h2>
+						<canvas id="barChart" width="800" height="22000"></canvas>
+					</div>
+					
+				</div>
 
 				<div class="col-12 tm-block-col">
 					<div
@@ -158,6 +154,43 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- https://getbootstrap.com/ -->
 	<script src="js/tooplate-scripts.js"></script>
+	<script type="text/javascript">
+		Chart.defaults.global.defaultFontColor = "white";
+		let ctxBar, optionsBar, configBar, barChart;
+
+		var labels, values, coloR;
+
+		$(document).ready(function () {
+			$.ajax({
+				url: "/trendskillchart",
+				method: "GET",
+				success: function (data) {
+					labels = data.data["labels"];
+					values = data.data["values"];
+					coloR = [];
+
+					var dynamicColors = function () {
+						var r = Math.floor(Math.random() * 255);
+						var g = Math.floor(Math.random() * 255);
+						var b = Math.floor(Math.random() * 255);
+						return "rgb(" + r + "," + g + "," + b + ")";
+					};
+
+					for (var i in labels) {
+						coloR.push(dynamicColors());
+					}
+
+					drawBarChart(labels, values, coloR,"Count [Skills]", "Skills");
+				},
+				error: function (data) {
+					console.log(data);
+				},
+			});
+		});
+		// $(window).resize(function() {
+		// 	updateBarChart();
+		// });
+	</script>
 </body>
 
 </html>

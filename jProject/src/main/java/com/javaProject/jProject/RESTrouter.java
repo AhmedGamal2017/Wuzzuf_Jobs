@@ -92,9 +92,13 @@ public class RESTrouter {
 		
 		Table original = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
 		Table cleaned = dp.cleanData(original);
-		Table target = dm.factorizeYearsExp(cleaned);
+		Table target = dm.getMostPopularSkills(cleaned);
 		
-		Response response = new Response("Done", target);
+		HashMap<String, Object> data = new HashMap<String, Object>();
+		data.put("labels", target.stringColumn(0).asList());
+		data.put("values", target.numberColumn(1).asList());
+
+		Response response = new Response("Done", new JSONObject(data));
 		
 		return response;
 	}

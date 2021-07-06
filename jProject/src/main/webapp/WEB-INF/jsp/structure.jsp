@@ -50,7 +50,6 @@
 								<a class="dropdown-item" href="/original">Original Data</a>
 								<a class="dropdown-item" href="/cleaned">Cleaned Data</a>
 								<a class="dropdown-item active" href="/structure">Structure of Data</a>
-								<a class="dropdown-item" href="/summary">Summary of Data</a>
 							</div>
 						</li>
 							
@@ -68,19 +67,6 @@
 								<a class="dropdown-item" href="/trendskill">Skills</a>
 							</div>
 						</li>
-							
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"> <i class="fas fa-chart-line"></i> <span>
-									Charts <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/piechart"><i class="fas fa-chart-pie"></i> Pie Chart</a>
-								<a class="dropdown-item" href="/barchart"><i class="far fa-chart-bar"></i> Bar Chart</a>
-							</div>
-						</li>
 						
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -91,7 +77,7 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="/factorization">Factorization</a>
-								<a class="dropdown-item" href="/kmeans">K-means</a>
+								<a class="dropdown-item disabled" disabled href="/kmeans">K-means</a>
 							</div></li>
 					</ul>
 
