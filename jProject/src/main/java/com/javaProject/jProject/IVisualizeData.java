@@ -9,4 +9,5 @@ public interface IVisualizeData {
 	
 	public Table displayPieChartWithConf(Table data);
 	public Table displayPieChartWithoutConf(Table data);
+	public void displaySkillsBarChart(Table data);
 }

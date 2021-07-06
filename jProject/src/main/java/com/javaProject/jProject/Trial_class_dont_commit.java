@@ -22,7 +22,12 @@ import java.util.List;
 
 public class Trial_class_dont_commit {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws IOException, Exception{
+		
+		String path= "src//main//resources//static//Wuzzuf_Jobs.csv";
+		Smile s= new Smile();
+		s.cluster(path);
+		
 		
 		DataFrameInstance df_i = DataFrameInstance.getInstance();
 		Table df = df_i.getTable("src//main//resources//static//Wuzzuf_Jobs.csv");

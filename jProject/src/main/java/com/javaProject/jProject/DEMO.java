@@ -20,6 +20,18 @@ public class DEMO {
 //		System.out.println(d1.structureOfData(df1));		
 		Table df2 = d1.cleanData(df1);
 
+//		for (Row row : d1.structureOfData(df1)) {
+//			System.out.println(row.columnCount());
+//			System.out.println(row.columnNames());
+//			System.out.println(row.columnNames().get(0));
+//			for (int i = 0; i < row.columnCount(); i++) {
+//				System.out.print(row.columnNames().get(i));
+//				System.out.print(row.getString(i));
+//				System.out.print(row.getColumnType(row.columnNames().get(i)));
+//			}
+//			System.out.println();
+//		}
+
 		ManipulateData d2 = new ManipulateData();
 
 //		System.out.println(d2.countCompanyJobs(df2));
@@ -34,23 +46,7 @@ public class DEMO {
 //		d3.displayBarChart(df2, "Location");
 //		d3.displayPieChart(df2);
 //		System.out.println(d3.displayTable(df2));
-//		System.out.println(d3.displayPieChartWithConf(df2));
-//		System.out.println(d3.displayPieChartWithoutConf(df2));
-
-		for (Row row : d3.displayPieChartWithoutConf(df2)) {
-//		System.out.println(row.columnCount());
-//		System.out.println(row.columnNames());
-//		System.out.println(row.columnNames().get(0));
-			for (int i = 0; i < row.columnCount(); i++) {
-//			System.out.print(row.columnNames().get(i));
-//			System.out.print(row.getString(i));
-				if (i == 1) {
-					System.out.println(row.getDouble(i));
-				}
-//			System.out.print(row.getColumnType(row.columnNames().get(i)));
-			}
-//		System.out.println();
-		}
+		d3.displaySkillsBarChart(d2.getMostPopularSkills(df2));
 
 	}
 

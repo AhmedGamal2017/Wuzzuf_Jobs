@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Bubble',
+    height: 600,
+    width: 800,
+    showlegend: true,
+    xaxis: {
+    title: 'Titles',
+    },
+
+    yaxis: {
+    title: 'Companies',
+    },
+
+};
+
+var trace0 =
+{
+x: ["0.0","3.0"],
+y: ["0.0","0.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Johnson Controls',
+};
+var trace1 =
+{
+x: ["1.0","29.0"],
+y: ["1.0","1.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'SYE English Community',
+};
+var trace2 =
+{
+x: ["2.0"],
+y: ["2.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'So Value Pharma',
+};
+var trace3 =
+{
+x: ["4.0","20.0","22.0","37.0","41.0","44.0","46.0","50.0","55.0","59.0","68.0","72.0"],
+y: ["3.0","3.0","3.0","3.0","3.0","3.0","3.0","3.0","3.0","3.0","3.0","3.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Confidential',
+};
+var trace4 =
+{
+x: ["5.0"],
+y: ["4.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Dexef',
+};
+var trace5 =
+{
+x: ["6.0"],
+y: ["5.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Leap Development Hub',
+};
+var trace6 =
+{
+x: ["7.0"],
+y: ["6.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'E3mel Business for Financial &amp; Managerial Consultancy',
+};
+var trace7 =
+{
+x: ["8.0"],
+y: ["7.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Line Design',
+};
+var trace8 =
+{
+x: ["9.0"],
+y: ["8.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'EL KHETA',
+};
+var trace9 =
+{
+x: ["10.0"],
+y: ["9.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'BeSteam',
+};
+var trace10 =
+{
+x: ["11.0"],
+y: ["10.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Speakup',
+};
+var trace11 =
+{
+x: ["12.0","24.0"],
+y: ["11.0","11.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Bayt El Khebra',
+};
+var trace12 =
+{
+x: ["13.0","16.0"],
+y: ["12.0","12.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'ZDS Architects',
+};
+var trace13 =
+{
+x: ["14.0"],
+y: ["13.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'El-Moasser Books',
+};
+var trace14 =
+{
+x: ["15.0","17.0","36.0"],
+y: ["14.0","14.0","14.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Atheel CC',
+};
+var trace15 =
+{
+x: ["18.0","19.0"],
+y: ["15.0","15.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Silicon21',
+};
+var trace16 =
+{
+x: ["21.0"],
+y: ["16.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Stylish Eve',
+};
+var trace17 =
+{
+x: ["17.0"],
+y: ["17.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Value',
+};
+var trace18 =
+{
+x: ["17.0"],
+y: ["18.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Pinnacle Real Estate Investments and Development Management',
+};
+var trace19 =
+{
+x: ["23.0","27.0","28.0","30.0"],
+y: ["19.0","19.0","19.0","19.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Longman Egypt',
+};
+var trace20 =
+{
+x: ["25.0"],
+y: ["20.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'MWG',
+};
+var trace21 =
+{
+x: ["26.0"],
+y: ["21.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Orientals for Urban Development',
+};
+var trace22 =
+{
+x: ["31.0"],
+y: ["22.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Zealous Solutions Ltd.',
+};
+var trace23 =
+{
+x: ["32.0","82.0"],
+y: ["23.0","23.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Raneen',
+};
+var trace24 =
+{
+x: ["33.0"],
+y: ["24.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'MHK Architects',
+};
+var trace25 =
+{
+x: ["34.0"],
+y: ["25.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'BLU Real Estate',
+};
+var trace26 =
+{
+x: ["35.0"],
+y: ["26.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Ebers',
+};
+var trace27 =
+{
+x: ["38.0"],
+y: ["27.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Paradise Inn Hotels &amp; Resorts',
+};
+var trace28 =
+{
+x: ["39.0"],
+y: ["28.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'OVEQ',
+};
+var trace29 =
+{
+x: ["40.0"],
+y: ["29.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Trillium Preschool',
+};
+var trace30 =
+{
+x: ["42.0"],
+y: ["30.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Air Gate',
+};
+var trace31 =
+{
+x: ["43.0"],
+y: ["31.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'SmartTech Systems',
+};
+var trace32 =
+{
+x: ["45.0"],
+y: ["32.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Kabbany Construction Group',
+};
+var trace33 =
+{
+x: ["47.0"],
+y: ["33.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Sparks preschool',
+};
+var trace34 =
+{
+x: ["48.0"],
+y: ["34.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Sumerge',
+};
+var trace35 =
+{
+x: ["49.0"],
+y: ["35.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'EL SHIDEED',
+};
+var trace36 =
+{
+x: ["51.0"],
+y: ["36.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Skep Home',
+};
+var trace37 =
+{
+x: ["52.0"],
+y: ["37.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Gulf Colours',
+};
+var trace38 =
+{
+x: ["53.0","54.0"],
+y: ["38.0","38.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Hamza Group',
+};
+var trace39 =
+{
+x: ["56.0","61.0"],
+y: ["39.0","39.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Cultiv',
+};
+var trace40 =
+{
+x: ["57.0","58.0","83.0"],
+y: ["40.0","40.0","40.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'OPPO Egypt',
+};
+var trace41 =
+{
+x: ["59.0"],
+y: ["41.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Kanayati Chemistry',
+};
+var trace42 =
+{
+x: ["60.0"],
+y: ["42.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Metal &amp; Steel Innovation',
+};
+var trace43 =
+{
+x: ["62.0","69.0","87.0","96.0"],
+y: ["43.0","43.0","43.0","43.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Google',
+};
+var trace44 =
+{
+x: ["63.0"],
+y: ["44.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Mintra - Misr for Industry and Trade',
+};
+var trace45 =
+{
+x: ["64.0"],
+y: ["45.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Macro Group',
+};
+var trace46 =
+{
+x: ["65.0"],
+y: ["46.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Electronic House',
+};
+var trace47 =
+{
+x: ["66.0"],
+y: ["47.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'kazary',
+};
+var trace48 =
+{
+x: ["67.0"],
+y: ["48.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Mantrac',
+};
+var trace49 =
+{
+x: ["70.0"],
+y: ["49.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Almotahida Education',
+};
+var trace50 =
+{
+x: ["71.0"],
+y: ["50.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Unimix Egypt for Readymix concrete',
+};
+var trace51 =
+{
+x: ["73.0","77.0"],
+y: ["51.0","51.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Mishkat Nour',
+};
+var trace52 =
+{
+x: ["74.0","75.0","78.0"],
+y: ["52.0","52.0","52.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Beit Network For Real Estate',
+};
+var trace53 =
+{
+x: ["76.0","80.0"],
+y: ["53.0","53.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'ABS',
+};
+var trace54 =
+{
+x: ["79.0"],
+y: ["54.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Raya Contact Center',
+};
+var trace55 =
+{
+x: ["81.0"],
+y: ["55.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Makanak',
+};
+var trace56 =
+{
+x: ["84.0"],
+y: ["56.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Club Shoes',
+};
+var trace57 =
+{
+x: ["85.0"],
+y: ["57.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Semicolon Agency',
+};
+var trace58 =
+{
+x: ["86.0","90.0"],
+y: ["58.0","58.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Integrated Technology Group',
+};
+var trace59 =
+{
+x: ["88.0"],
+y: ["59.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'ECCC',
+};
+var trace60 =
+{
+x: ["89.0","91.0","95.0"],
+y: ["60.0","60.0","60.0"],
+showlegend: true,
+marker: {
+    size: [10.0, 10.0, 10.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'wnpro',
+};
+var trace61 =
+{
+x: ["92.0"],
+y: ["61.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Fields for Trading and Industries',
+};
+var trace62 =
+{
+x: ["93.0"],
+y: ["62.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'Acrylicon Egypt for flooring',
+};
+var trace63 =
+{
+x: ["94.0"],
+y: ["63.0"],
+showlegend: true,
+marker: {
+    size: 10.0,
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: 'LandMax Real Estate',
+};
+
+        var data = [ trace0, trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10, trace11, trace12, trace13, trace14, trace15, trace16, trace17, trace18, trace19, trace20, trace21, trace22, trace23, trace24, trace25, trace26, trace27, trace28, trace29, trace30, trace31, trace32, trace33, trace34, trace35, trace36, trace37, trace38, trace39, trace40, trace41, trace42, trace43, trace44, trace45, trace46, trace47, trace48, trace49, trace50, trace51, trace52, trace53, trace54, trace55, trace56, trace57, trace58, trace59, trace60, trace61, trace62, trace63];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>

@@ -93,7 +93,7 @@ public class ManipulateData implements IManipulateData {
 
 		IntColumn factorized_exp = IntColumn.create("Factorized Experience", factorize_Array);
 
-		return data.addColumns(factorized_exp);
+		return data.insertColumn(6, factorized_exp);
 
 	}
 

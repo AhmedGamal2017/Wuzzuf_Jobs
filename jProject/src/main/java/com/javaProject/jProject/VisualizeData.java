@@ -61,6 +61,22 @@ public class VisualizeData implements IVisualizeData {
 		
 
 	}
+	
+	
+	@Override
+	public void displaySkillsBarChart(Table data) {
+		
+		
+				
+		Plot.show(
+		        VerticalBarPlot.create(
+		            "Most Popular skills", // plot title
+		            data, // table
+		            "skills", // grouping column name
+		            "Count [skills]")); // numeric column name
+		
+
+	}
 
 	@Override
 	public Table displayPieChartWithConf(Table data) {
