@@ -55,7 +55,7 @@
 						</li>
 							
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 								role="button" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false"> <i class="fas fa-tachometer-alt"></i> <span>
 									Statistics <i class="fas fa-angle-down"></i>
@@ -63,7 +63,7 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="/trendcomp">Most Demanding Companies</a>
-								<a class="dropdown-item active" href="/trendjob">Popular Jobs</a>
+								<a class="dropdown-item" href="/trendjob">Popular Jobs</a>
 								<a class="dropdown-item" href="/trendarea">Popular Areas</a>
 								<a class="dropdown-item" href="/trendskill">Skills</a>
 							</div>
@@ -83,14 +83,14 @@
 						</li>
 						
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> <i class="fas fa-medal"></i> <span>
 									Bonus <i class="fas fa-angle-down"></i>
 								</span>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/factorization">Factorization</a>
+								<a class="dropdown-item active" href="/factorization">Factorization</a>
 								<a class="dropdown-item" href="/kmeans">K-means</a>
 							</div></li>
 					</ul>
@@ -114,7 +114,7 @@
 				<div class="col-12 tm-block-col">
 					<div
 						class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-						<h2 class="tm-block-title">Most Popular Job Titles</h2>
+						<h2 class="tm-block-title">Factorize the YearsExp</h2>
 						<table class="table">
 							<thead>
 								<tr>

@@ -114,7 +114,7 @@
 				<div class="col-12 tm-block-col">
 					<div
 						class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-						<h2 class="tm-block-title">Data Summary</h2>
+						<h2 class="tm-block-title">Most Popular Areas</h2>
 						<table class="table">
 							<thead>
 								<tr>
@@ -134,6 +134,9 @@
 							</tbody>
 						</table>
 					</div>
+					<a href=""
+						class="btn btn-primary btn-block text-uppercase mb-3">Show
+						Chart for This Table</a>
 				</div>
 			</div>
 		</div>

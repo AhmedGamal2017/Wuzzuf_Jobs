@@ -6,14 +6,11 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import tech.tablesaw.api.Table;
 
-/**
- * @author Mr. Gamal Hussein
- *
- */
 @Controller
 public class Router {
 
@@ -25,6 +22,7 @@ public class Router {
 	
 	PrepareData dp = new PrepareData();
 	ManipulateData dm = new ManipulateData();
+	VisualizeData dv = new VisualizeData();
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
@@ -98,6 +96,18 @@ public class Router {
 		return "structure";
 	}
 
+	@RequestMapping("/factorization")
+	public String factorize(Map<String, Object> model) {
+		Table original = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
+		Table cleaned = dp.cleanData(original);
+		Table target = dm.factorizeYearsExp(cleaned);
+
+		model.put("dataHeads", dm.getTableHeads(target));
+		model.put("data", dm.convertTable2StringList(target));
+
+		return "factorize";
+	}
+
 	@RequestMapping("/piechart")
 	public String piechart(Map<String, Object> model) {
 
@@ -131,6 +141,17 @@ public class Router {
 		
 		return "comp";
 	}
+	
+	@RequestMapping("/trendcompchart")
+	public String trendcompchart(Map<String, Object> model) {
+
+		Table original = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
+		Table cleaned = dp.cleanData(original);
+
+//		dv.displayPieChart(cleaned);
+		
+		return null;
+	}
 
 	@RequestMapping("/trendjob")
 	public String trendingJobs(Map<String, Object> model) {
@@ -145,6 +166,16 @@ public class Router {
 		return "jobs";
 	}
 
+	@GetMapping("/trendjobchart")
+	public List<String> trendjobchart(Map<String, Object> model) {
+
+		Table original = DataFrameInstance.getInstance().getTable("src//main//resources//static//Wuzzuf_Jobs.csv");
+		Table cleaned = dp.cleanData(original);
+		Table target = dm.getMostPopular(cleaned, "Title");
+		
+		return dm.getTableHeads(target);
+	}
+	
 	@RequestMapping("/trendarea")
 	public String trendingAreas(Map<String, Object> model) {
 
@@ -158,6 +189,12 @@ public class Router {
 		return "area";
 	}
 
+	@RequestMapping("/trendareachart")
+	public String trendareachart(Map<String, Object> model) {
+
+		return "pieChart";
+	}
+	
 	@RequestMapping("/trendskill")
 	public String trendingSkills(Map<String, Object> model) {
 
@@ -169,6 +206,12 @@ public class Router {
 		model.put("data", dm.convertTable2StringList(target));
 		
 		return "skills";
+	}
+	
+	@RequestMapping("/trendskillchart")
+	public String trendskillchart(Map<String, Object> model) {
+
+		return "pieChart";
 	}
 
 }

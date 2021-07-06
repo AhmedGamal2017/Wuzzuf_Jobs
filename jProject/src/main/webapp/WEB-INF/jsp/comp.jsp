@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -34,61 +34,59 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto h-100">
-						<li class="nav-item">
-							<a class="nav-link" href="/">
-								<i class="fas fa-home"></i> Home
-							</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-									<i class="far fa-file-alt"></i> <span> Reports <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
+						<li class="nav-item"><a class="nav-link" href="/"> <i
+								class="fas fa-home"></i> Home
+						</a></li>
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <i class="far fa-file-alt"></i> <span>
+									Reports <i class="fas fa-angle-down"></i>
+							</span>
+						</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/original">Original Data</a>
-								<a class="dropdown-item" href="/cleaned">Cleaned Data</a>
-								<a class="dropdown-item" href="/structure">Structure of Data</a>
-								<a class="dropdown-item" href="/summary">Summary of Data</a>
-							</div>
-						</li>
-							
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
-								role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"> <i class="fas fa-tachometer-alt"></i> <span>
-									Statistics <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
+								<a class="dropdown-item" href="/original">Original Data</a> <a
+									class="dropdown-item" href="/cleaned">Cleaned Data</a> <a
+									class="dropdown-item" href="/structure">Structure of Data</a> <a
+									class="dropdown-item" href="/summary">Summary of Data</a>
+							</div></li>
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle active" href="#"
+							id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <i
+								class="fas fa-tachometer-alt"></i> <span> Statistics <i
+									class="fas fa-angle-down"></i>
+							</span>
+						</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item active" href="/trendcomp">Most Demanding Companies</a>
-								<a class="dropdown-item" href="/trendjob">Popular Jobs</a>
-								<a class="dropdown-item" href="/trendarea">Popular Areas</a>
-								<a class="dropdown-item" href="/trendskill">Skills</a>
-							</div>
-						</li>
-							
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"> <i class="fas fa-chart-line"></i> <span>
+								<a class="dropdown-item active" href="/trendcomp">Most
+									Demanding Companies</a> <a class="dropdown-item" href="/trendjob">Popular
+									Jobs</a> <a class="dropdown-item" href="/trendarea">Popular
+									Areas</a> <a class="dropdown-item" href="/trendskill">Skills</a>
+							</div></li>
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <i class="fas fa-chart-line"></i> <span>
 									Charts <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
+							</span>
+						</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/piechart"><i class="fas fa-chart-pie"></i> Pie Chart</a>
-								<a class="dropdown-item" href="/barchart"><i class="far fa-chart-bar"></i> Bar Chart</a>
-							</div>
-						</li>
-						
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+								<a class="dropdown-item" href="/piechart"><i
+									class="fas fa-chart-pie"></i> Pie Chart</a> <a
+									class="dropdown-item" href="/barchart"><i
+									class="far fa-chart-bar"></i> Bar Chart</a>
+							</div></li>
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> <i class="fas fa-medal"></i> <span>
 									Bonus <i class="fas fa-angle-down"></i>
-								</span>
-							</a>
+							</span>
+						</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="/factorization">Factorization</a>
 								<a class="dropdown-item" href="/kmeans">K-means</a>
@@ -114,7 +112,7 @@
 				<div class="col-12 tm-block-col">
 					<div
 						class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-						<h2 class="tm-block-title">Data Summary</h2>
+						<h2 class="tm-block-title">Demanding Companies</h2>
 						<table class="table">
 							<thead>
 								<tr>
@@ -134,14 +132,16 @@
 							</tbody>
 						</table>
 					</div>
+					<a href="/trendcompchart"
+						class="btn btn-primary btn-block text-uppercase mb-3">Show
+						Chart for This Table</a>
 				</div>
 			</div>
 		</div>
 		<footer class="tm-footer row tm-mt-small">
 			<div class="col-12 font-weight-light">
-				<p class="text-center text-white mb-0 px-4 small">
-					Wuzzuf Jobs Statistics
-				</p>
+				<p class="text-center text-white mb-0 px-4 small">Wuzzuf Jobs
+					Statistics</p>
 			</div>
 		</footer>
 	</div>
@@ -155,6 +155,20 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- https://getbootstrap.com/ -->
 	<script src="js/tooplate-scripts.js"></script>
+	<script type="text/javascript">
+	 $.ajax({
+         url: '/trendjobchart',
+         type: 'get',
+         success: function (res) {
+             if (res.state == "success") {
+            	 console.log(res.data)
+             };
+         },
+         error: function (err) {
+             console.log("Failed")
+         }
+     })
+	</script>
 </body>
 
 </html>
